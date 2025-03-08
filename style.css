@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  /* This ensures that Padding & Border are included in the total width and height of the element */
+  box-sizing: border-box;
+}
+
+body {
+  /* apple-system, and system-ui font,
+    for clean, modern system font that's optimized for various devices */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  /* body color and text color - so this will seem to be the dark modern vibez (to create a dark sleek canvas for the rest of the design) */
+  background-color: black;
+  color: #e7e7e7;
+  /* set this color so, that it is easy to read against dark backgrounds */
+
+  /* layout to be minimum of 100vh - no matter how much content is */
+  min-height: 100vh;
+
+  /* improving readability of the text - default line height to be 1.5 */
+  line-height: 1.5;
+}
+
+/* Now let's move on the styling of the gradient lightning image - layer blur effect  */
+
+.img-gradient {
+  /* to precisely control where it sits on the page - we will make its position absolute */
+  position: absolute;
+  /* to align perfectly at the top-right corner - we will set its properties */
+  top: 0;
+  right: 0;
+
+  /* to make the gradient blend nicely, we will reduce the opacity to half */
+  opacity: 0.5;
+  /* which will give it a more subtle layer effect */
+
+  /* finally,we need to ensure that gradient image stays - behind all other elements on the page */
+  z-index: -1;
+}
+
+/* Next style the layer-blur className */
+/* This is the element that - gives us the glowing effect around the gardient (img) */
+.layer-blur {
+  /* So, it remains invisible */
+  height: 0;
+  /* but we can still apply cool visual effects */
+  width: 30rem;
+
+  /* now, we will position it absolute as well - so we can control its exact position or placement */
+  position: absolute;
+
+  /* to position it a little lower on the page, and aligh it to the right - we will use top-right positioning */
+  top: 20%;
+  right: 0;
+
+  /* to create a glowing effect, we'll apply a box-shadow that gives the div a soft blurred glow */
+  box-shadow: 0 0 700px 16px white;
+
+  /* let's apply a slight tilt by adding a 30deg rotation */
+  rotate: -30deg;
+  /* this gives an effect of angle and depth  */
+
+  /* with this now we'll set its z-index to -1 */
+  z-index: -1;
+}
+
+/* With all these styles applied, we now have a Sleek Gradient Background with a glowing effect - to give the page a modern dynamic feel */
+
+/* Now, let's move on stylign our Navbar Section */
+.conatiner {
+  /* first, we'll ensure its full widht willbe 100% */
+  width: 100%;
+  /* Now, margin will 0 frontop-bottom, and center from left-right (auto) */
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  /* position to relative, to handle content inside it, with relative to the "container" element */
+  position: relative;
+
+  /* overflow, will set to "hidden" ensure that no content spills out */
+  overflow: hidden;
+}
+
+header {
+  /* first, we'll set display to "flex", to align elements horizontally */
+  display: flex;
+
+  /* use justify-content to be "space-between" to push the elements on the opposite ends (logo, nav, and button) */
+  justify-content: space-between;
+
+  /* set align-items to "center" to keep, elements vertically aligned */
+  align-items: center;
+
+  /* for spacing, we'll apply 1rem for top-bottom, and 5rem for left-right, ensuring good separation from other sections */
+  padding: 1rem 5rem;
+
+  /* Now, as this header, should be visible above all elements, so its z-index will be 999 */
+  z-index: 999;
+}
+
+.logo {
+  /* we'll remove its font-margin, and increase its font-size, and font-weight for sleek light-weight feel */
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+nav {
+  /* we will same, flex, and align-items to be vertically center */
+  display: flex;
+  align-items: center;
+
+  /* and now, we'll also create a Breathing Room - by adding a gap of three REM between links to slightly nudge*/
+  gap: 3rem;
+
+  /* Now, Navigation, nav closer to the logo - we'll apply a negative left margin */
+  margin-left: -5%;
+}
+
+/* for the anchor tags inside the nav */
+nav a {
+  /* we'll style them for the font-size of 1rem - slight increase the readability, with letter spacing of 1rem, and 0.1rem respectively */
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+
+  /* apply a smooth transition for an elegant hover effect */
+  transition: 0.2s ease;
+
+  /* remove text decoration by setting it to "none" - ensuring clean minimal links */
+  text-decoration: none;
+
+  /* make sure the text-color inherits from the body for consistency  */
+  color: inherit;
+}
+
+/* to add interactivity we'll create a hover effect */
+nav a:hover {
+  /* when user hovers - text color suddenly changes to "gray", enhancing the user experience */
+  color: #a7a7a7;
+}
+
+/* now, let's focus on the signin button styling */
+.btn-signin {
+  /* btn - coloring scheme changes */
+  background-color: #a7a7a7;
+  color: black;
+
+  /* now, adding, padding, which is included in the width and height of the button, currently, width an height are "auto"  */
+  padding: 0.8rem 2rem;
+  /* making it to feel more balanced */
+
+  /* remove the default border */
+  border: none;
+
+  /* setting border radius */
+  border-radius: 50px;
+
+  /* makign the text more readable, letter-spacing, and font-weight */
+  font-size: 1rem;
+  /* letter-spacing: 0.8rem; */
+  font-weight: 500;
+
+  /* add transition on the background-color */
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  /* adding custom shadow */
+  box-shadow: 0 1px 5px 1px #5e5d5d;
+}
+
+.btn-signin:hover {
+  background-color: #d7d7d7;
+  /* transition-duration: 0.2s; */
+  /* transition-property: all; */
+}

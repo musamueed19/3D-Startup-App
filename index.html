@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Startup App</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- inside the body tag, we will be inserting a modern lightning gradient effect - for the Top Right Section of the Project
+     
+    First, We need the 'img' element for the gradient 
+    -->
+
+    <img class="img-gradient" src="./gradient.png" alt="gradient image" />
+
+    <!-- below then, add a div, with className 'layer-blur' - This will help us to create a (glowing effect around our gradient) -->
+
+    <div class="layer-blur"></div>
+
+    <!-- Now, lets create our Navbar Section -->
+    <div class="container">
+      <!-- This wi'll be our Wrapper to keep everything neatly structured -->
+
+      <!-- Now, we'll have "header" to hold our navigation elements -->
+      <header>
+        <!-- first, we'll build our logo 🔥 -->
+        <h1 class="logo">DevKing👑</h1>
+
+        <!-- Right below, we'll have "nav" element - that will contain 4 anchor tags -->
+        <nav>
+          <a href="#">COMPANY</a>
+          <a href="#">FEATURES</a>
+          <a href="#">RESOURCES</a>
+          <a href="#">DOCS</a>
+        </nav>
+
+        <!-- to complete the navigate - we'll also have the Sign-in button - with className of btn-signin (which will allow users to login quickly) -->
+        <button class="btn-signin">Sign In</button>
+      </header>
+    </div>
+  </body>
+</html>
