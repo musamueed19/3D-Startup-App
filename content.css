@@ -1,0 +1,141 @@
+/* MAIN CONTENT */
+
+main {
+  /* sets the display to flex */
+  display: flex;
+
+  /* sets the flex-direction to "column" to stack elements vertically */
+  flex-direction: column;
+
+  /* to ensure proper alignment - set justify-content to "center", allowing the content to be perfectly center within the section */
+  justify-content: center;
+
+  /* responsive height, that adapts dynamically use min-height, we will ensure that this section will take most of the viewport height, while accounting, while accounting spacing and layout balanced */
+  min-height: calc(90vh - 6rem);
+}
+
+.content {
+  /* sets the max-width to 40rem - ensuring that it remains structured within the defined space. */
+  max-width: 40rem;
+
+  /* giving it offset from the edge for a balanced layout - margin */
+  margin-left: 10%;
+
+  /* to make sure, it appears above the other elements */
+  z-index: 999;
+}
+
+.tag-box {
+  /* sets position to "relative", so that position for inside elements */
+  position: relative;
+
+  /* sets width and height */
+  width: 18rem;
+  height: 2.5rem;
+
+  /* to give it a sleek rounded experience, apply a border-radius */
+  border-radius: 50px;
+
+  /* for background, use linear-gradient - that transitions smoothly from right to left */
+  background: linear-gradient(
+    to right,
+    #656565,
+    #7f42a7,
+    #6600c5,
+    #5300a0,
+    #757575,
+    #656565
+  );
+
+  /* double the background-size, to enable smooth animation effect */
+  background-size: 200%;
+
+  /* gradient animation - running infinitely over 2.5s */
+  animation: animationGradient 2.5s linear infinite;
+
+  /* lastly, add a small box-shadow to enhance, the dpeth */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.336);
+}
+
+/* To bring the animation to live, define the "keyframes" for gradient */
+@keyframes animationGradient {
+  /* gradually, shifting the background position to 200% - creating a dynamic movement */
+  to {
+    background-position: 200%;
+  }
+}
+
+/* next, style the tag itself */
+.tag-box .tag {
+  position: absolute;
+  inset: 3px 3px 3px 3px;
+
+  /* give it a black background, and maintain the 50px border-radius for a rounded look */
+  background-color: black;
+  border-radius: 50px;
+
+  /* display flex, align items inside this element to be center, both vertically, and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* adding a smooth transition effect */
+  transition: 0.5s ease;
+
+  cursor: pointer;
+}
+
+/* when hover over - text-color changes to purple, adding a subtle yet modern feel */
+.tag-box .tag:hover {
+  color: #7e08ed;
+}
+
+/* now, refine the heading - H1 in the "content" */
+.content h1 {
+  /* making the "Hero" section H1 to be bold and prominent, font-size, and font-weight */
+  font-size: 4rem;
+  font-weight: 600;
+
+  /* add letter-spacing of 0.1em for better readability */
+  letter-spacing: 0.09em;
+
+  /* apply margin from to-bottom to make it prominant and dsitinguishable */
+  margin: 1.8rem 0;
+
+  /* line-height, and text-shadow */
+  line-height: 1.2;
+  /* custom - H1,  */
+
+  /* box-shadow: 0 0 10px rgba(128, 128, 128, 0.418); */
+}
+
+/* moving onto the description className */
+.description {
+    /* keeping it readable and elegent */
+    font-size: 1.2rem;
+
+    /* sets its letter-spacing & line-height */
+    letter-spacing: 0.05em;
+
+    /* max-width to "35rem" to prevent it stretching to wide, to make it elegent and readable */
+    max-width: 35rem;
+
+    /* to make it distinguisable from H1 */
+    color: gray;
+}
+
+/* let's style the buttons class, which holds the 2 interactive buttons */
+.buttons {
+/* display flex, and "1rem" - gap between button for proper transition */
+}
+
+/* general "btn" className */
+.btn {
+    border-radius: 50px;
+    border: 1px solid gray;
+    padding: 1rem 2rem;
+
+    /*  */
+    text-decoration: none;
+    color: inherit
+}
